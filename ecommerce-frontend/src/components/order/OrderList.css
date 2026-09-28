@@ -1,0 +1,241 @@
+.orders-page {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 40px 20px;
+}
+
+.orders-title {
+    margin-bottom: 30px;
+
+    font-size: 32px;
+
+    color: #222;
+}
+
+
+/* Order List */
+
+.orders-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* Order Card */
+
+.order-card {
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Header */
+
+.order-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.order-label {
+    margin: 0 0 5px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+.order-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #222;
+}
+
+
+/* Status */
+
+.order-status {
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    background: #eeeeee;
+
+    color: #555;
+}
+
+.order-status.created {
+    background: #e3f2fd;
+
+    color: #1565c0;
+}
+
+.order-status.confirmed {
+    background: #e8f5e9;
+
+    color: #2e7d32;
+}
+
+.order-status.processing {
+    background: #fff3e0;
+
+    color: #ef6c00;
+}
+
+.order-status.shipped {
+    background: #ede7f6;
+
+    color: #5e35b1;
+}
+
+.order-status.delivered {
+    background: #e8f5e9;
+
+    color: #2e7d32;
+}
+
+.order-status.cancelled {
+    background: #ffebee;
+
+    color: #c62828;
+}
+
+
+/* Details */
+
+.order-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    padding-top: 20px;
+}
+
+.order-detail {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    font-size: 15px;
+
+    color: #333;
+}
+
+.detail-label {
+    font-size: 13px;
+
+    color: #777;
+}
+
+.order-price {
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #222;
+}
+
+
+/* Loading / Error */
+
+.orders-message {
+    padding: 50px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #666;
+}
+
+.orders-message.error {
+    color: #c62828;
+}
+
+
+/* Empty Orders */
+
+.empty-orders {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 10px;
+}
+
+.empty-orders h2 {
+    margin-bottom: 10px;
+}
+
+.empty-orders p {
+    margin: 0;
+
+    color: #777;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .order-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .orders-page {
+        padding: 25px 15px;
+    }
+
+    .orders-title {
+        font-size: 26px;
+    }
+
+    .order-card {
+        padding: 18px;
+    }
+
+    .order-header {
+        align-items: flex-start;
+    }
+
+    .order-details {
+        grid-template-columns: 1fr;
+    }
+}
